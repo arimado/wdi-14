@@ -55,3 +55,17 @@ if (grade === "A") {
 } else {
     return "U WOT M8?"
 }
+
+
+// The Pluralizer
+//
+// Write an if statement that works with a noun and a number. Make the noun plural if necessary!!
+
+var thing = null;
+var numThings = null;
+
+if (numThings > 1) {
+    thing + "s";
+} else {
+    console.log('there can only be ONE!')
+}
