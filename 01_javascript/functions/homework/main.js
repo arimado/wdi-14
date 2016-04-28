@@ -98,7 +98,7 @@ var mixUp = function (s1, s2) {
     return s1 + s2;
 }
 
-mixUp('MARSH', 'BENDOVER    ');
+// mixUp('MARSH', 'BENDOVER    ');
 
 // FixStart
 //
@@ -107,6 +107,8 @@ mixUp('MARSH', 'BENDOVER    ');
 // fixStart('babble'): 'ba**le'
 
 var fixStart = function ( string ) {
+
+
 
 }
 
@@ -120,8 +122,25 @@ var fixStart = function ( string ) {
 
 var verbing = function ( string ) {
 
+    var last3Letters = string.slice(string.length - 3, string.length);
+    var lessLast3Letters = string.slice(0, string.length -3);
+    var result;
 
+    console.log(lessLast3Letters);
+    console.log(last3Letters);
+
+    if (string.length >= 3) {
+        if (last3Letters === 'ing') {
+            result = lessLast3Letters + 'ly';
+            return result;
+        } else {
+            result = string + 'ing';
+            return result;
+        }
+    }
 }
+
+console.log(verbing('jeremy'));
 
 // Not Bad
 //
@@ -135,3 +154,9 @@ var verbing = function ( string ) {
 //   notBad('This dinner is not that bad!'): 'This dinner is good!'
 //   notBad('This movie is not so bad!'): 'This movie is good!'
 //   notBad('This dinner is bad!'): 'This dinner is bad!'
+
+var notBad = function (string) {
+    var instanceOfNot = string.indexOf('not');
+    var instanceofBad = string.indexOf('bad'); 
+    console.log(instanceOfNot, " ", instanceofBad);
+}
