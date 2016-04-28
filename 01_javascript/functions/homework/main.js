@@ -74,15 +74,41 @@ var drEvil = function ( n ) {
 //   mixUp('dog', 'dinner'): 'dig donner'
 // Look up the JavaScript string reference to find methods which may be useful!
 
-var mixUp = function (s1, s1) {
+var mixUp = function (s1, s2) {
+
+    // GET FRONT TEXT
+    var s1frontText = s1.slice(0, 2);
+    // console.log(s1frontText);
+    var s2frontText = s2.slice(0, 2);
+    // console.log(s2frontText);
+
+    // GET BACK TEXT
+    var s1BackText = s1.slice(2, s1.length);
+    // console.log(s1BackText);
+
+    var s2BackText = s2.slice(2, s2.length);
+    // console.log(s2BackText);
+
+
+    // MIX UP
+    var mixUp = s2frontText + s1BackText + ' ' + s1frontText + s2BackText;
+    console.log(mixUp);
+
+
     return s1 + s2;
 }
+
+mixUp('MARSH', 'BENDOVER    ');
 
 // FixStart
 //
 // Create a function called fixStart. It should take a single argument, a string, and return a version where all occurences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:
 //
 // fixStart('babble'): 'ba**le'
+
+var fixStart = function ( string ) {
+
+}
 
 // Verbing
 //
@@ -93,11 +119,8 @@ var mixUp = function (s1, s1) {
 //   verbing('go'): 'go'
 
 var verbing = function ( string ) {
-    if ( string.length >== 3 ) {
-        if ( string. ) {
 
-        }
-    }
+
 }
 
 // Not Bad
